@@ -1,0 +1,15 @@
+[rocky9-baseos]
+name=Rocky Linux 9 - BaseOS
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=BaseOS-9
+#baseurl=http://dl.rockylinux.org/pub/rocky/9/BaseOS/$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
+
+[rocky9-appstream]
+name=Rocky Linux 9 - AppStream
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=AppStream-9
+#baseurl=http://dl.rockylinux.org/pub/rocky/9/AppStream/$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial

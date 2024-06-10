@@ -1,0 +1,13 @@
+[ol9_baseos_latest]
+name=Oracle Linux 9 BaseOS Latest ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL9/baseos/latest/$basearch/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
+gpgcheck=1
+enabled=1
+
+[ol9_appstream]
+name=Oracle Linux 9 Application Stream Packages ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL9/appstream/$basearch/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
+gpgcheck=1
+enabled=1

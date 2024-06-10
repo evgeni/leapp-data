@@ -1,0 +1,15 @@
+[almalinux9-baseos]
+name=AlmaLinux 9 - BaseOS
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/9/baseos
+# baseurl=https://repo.almalinux.org/almalinux/9/BaseOS/$basearch/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+
+[almalinux9-appstream]
+name=AlmaLinux 9 - AppStream
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/9/appstream
+# baseurl=https://repo.almalinux.org/almalinux/9/AppStream/$basearch/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
