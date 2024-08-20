@@ -26,6 +26,9 @@ for _, distro in ipairs(distros) do
   if distro ~= 'centos' then
     print('install -D -m0644 -T ' .. distro .. '/gpg-signatures.json'.. ' ' .. rpm.expand('%{buildroot}') .. '/usr/share/leapp-repository/repositories/system_upgrade/common/files/distro/' .. distro .. '/gpg-signatures.json\n')
   end
+  if distro == 'almalinux' then
+    print('install -D -m0644 -T ' .. distro .. '/RPM-GPG-KEY-' .. distro .. '-9 ' .. rpm.expand('%{buildroot}') .. '/usr/share/leapp-repository/repositories/system_upgrade/common/files/rpm-gpg/9/RPM-GPG-KEY-' .. distro .. '-9\n')
+  end
 end
 
 for _, distro in ipairs(distros) do
@@ -46,12 +49,16 @@ for _, distro in ipairs(distros) do
   if distro ~= 'centos' then
     print('/usr/share/leapp-repository/repositories/system_upgrade/common/files/distro/' .. distro.. '\n')
   end
+  if distro == 'almalinux' then
+    print('/usr/share/leapp-repository/repositories/system_upgrade/common/files/rpm-gpg/9/\n')
+  end
 end
 }
 
 %changelog
 * Tue Aug 20 2024 Evgeni Golov - 0.4-1
 - Add obsoleted GPG keys for Almalinux
+- Use the right key for AlmaLinux 9 repos
 
 * Tue Jun 11 2024 Evgeni Golov - 0.3-1
 - Rewrite package to generate all RPMS from one SRPM using Lua
