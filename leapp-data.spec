@@ -1,5 +1,5 @@
 Name:		leapp-data
-Version:	0.3
+Version:	0.4
 Release:	1%{?dist}
 Summary:	data for leapp
 License:	ASL 2.0
@@ -50,6 +50,9 @@ end
 }
 
 %changelog
+* Tue Aug 20 2024 Evgeni Golov - 0.4-1
+- Add obsoleted GPG keys for Almalinux
+
 * Tue Jun 11 2024 Evgeni Golov - 0.3-1
 - Rewrite package to generate all RPMS from one SRPM using Lua
 - Only ship repositories and GPG data, everything else is in leapp-repository already
